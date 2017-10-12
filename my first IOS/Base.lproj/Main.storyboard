@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello there!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4J-aD-pFh">
-                                <rect key="frame" x="143" y="320" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6U-j5-uyh">
                                 <rect key="frame" x="148" y="411" width="78" height="50"/>
                                 <state key="normal" title="PUSH ME"/>
@@ -30,18 +24,48 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQ0-Jg-icL"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHY-xh-I9i">
+                                <rect key="frame" x="162.5" y="296" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="oJA-d1-Rko"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ljg-nO-ANM">
+                                <rect key="frame" x="162.5" y="337" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="70s-kk-tR3"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello there!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4J-aD-pFh">
+                                <rect key="frame" x="148" y="121" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="a4J-aD-pFh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="FIi-QJ-EeU"/>
+                            <constraint firstItem="yHY-xh-I9i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Agf-n3-yuG"/>
+                            <constraint firstItem="Ljg-nO-ANM" firstAttribute="top" secondItem="X6U-j5-uyh" secondAttribute="bottom" constant="96" id="BBh-Lq-PPa"/>
+                            <constraint firstItem="a4J-aD-pFh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="FIi-QJ-EeU"/>
+                            <constraint firstItem="Ljg-nO-ANM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LFd-mK-8Wa"/>
                             <constraint firstItem="X6U-j5-uyh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="btb-Ns-3TD"/>
                             <constraint firstItem="X6U-j5-uyh" firstAttribute="top" secondItem="a4J-aD-pFh" secondAttribute="bottom" constant="350" id="d6L-c3-a5q"/>
                             <constraint firstItem="X6U-j5-uyh" firstAttribute="top" secondItem="a4J-aD-pFh" secondAttribute="bottom" constant="70" id="hHM-Go-R3z"/>
                             <constraint firstItem="a4J-aD-pFh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s4p-Yi-6zI"/>
+                            <constraint firstItem="yHY-xh-I9i" firstAttribute="top" secondItem="X6U-j5-uyh" secondAttribute="bottom" constant="55" id="xnM-id-pWg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="yHY-xh-I9i" id="kHS-P1-eph"/>
+                        <outlet property="text2" destination="Ljg-nO-ANM" id="yvK-L9-qMu"/>
                         <outlet property="theLabel" destination="a4J-aD-pFh" id="fwK-M7-hR2"/>
                     </connections>
                 </viewController>
